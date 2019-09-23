@@ -4,6 +4,7 @@ class Ruta{
         this._bases = bases;
         this._numero =numero;
         this._capacidad = 20
+        this._baseActual = 0
     }
     get chofer (){
         return this._chofer;
@@ -24,6 +25,9 @@ class Ruta{
     set numero (numero){
         this._numero = numero;
     }
+    recorrer(){
+        this._baseActual++
+    }
 
     getToString(){
         console.log(`Chofer:${this._chofer}
@@ -40,16 +44,21 @@ class Base{
         this._nombre = nombre;
         this._latitud = latitud;
         this._longitud = longitud;
+        this._hrsSalida = []
     }
-    get nombre(){
+    get nombre (){
         return this._nombre;
     }
-    get latitud(){
+    get latitud (){
         return this._latitud;
     }
-    get longitud(){
-        return this._longitud
+    get longitud (){
+        return this._longitud;
     }
+    get hrsSalida (){
+        return this._hrsSalida;
+    }
+    
     set nombre(nombre){
         this._nombre = nombre;
     }
